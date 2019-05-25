@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Configuration status="WARN">
+
+    <CustomLevels>
+        <CustomLevel name="STRANGE" intLevel="360"/>
+        <CustomLevel name="SUCCESS" intLevel="340"/>
+    </CustomLevels>
+
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%highlight{%d{HH:mm:ss} [%t] %-5level %logger{36} - %msg%n}{STRANGE=bright yellow bold, SUCCESS=bright green bold}"/>
+        </Console>
+    </Appenders>
+
+    <Loggers>
+        <Logger name="kz.zangpro" level="info" additivity="false">
+            <AppenderRef ref="Console"/>
+        </Logger>
+    </Loggers>
+
+    <Root>
+        <Appender ref="Console"/>
+    </Root>
+
+</Configuration>
